@@ -1,0 +1,16 @@
+{
+    "input": {
+        "prompt": "portrait photo of a woman, soft studio light, 85mm lens, ultra detailed skin",
+        "negative_prompt": "blurry, lowres, bad anatomy, watermark",
+        "width": 768,
+        "height": 768,
+        "steps": 24,
+        "cfg": 1.2,
+        "seed": 12345,
+        "lora_url": "",
+        "lora_name": "",
+        "lora_strength_model": 1.0,
+        "lora_strength_clip": 1.0,
+        "timeout_sec": 1800
+    }
+}

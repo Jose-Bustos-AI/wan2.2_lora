@@ -24,7 +24,7 @@ RUN pip3 install --upgrade pip && pip3 install -r /app/requirements.txt
 RUN git clone https://github.com/comfyanonymous/ComfyUI.git /comfyui && \
     pip3 install -r /comfyui/requirements.txt
 
-# (Opcional pero recomendado) Manager
+# Optional: ComfyUI Manager (Good to have)
 RUN git clone https://github.com/Comfy-Org/ComfyUI-Manager.git /comfyui/custom_nodes/ComfyUI-Manager || true
 
 # Copy app files
@@ -32,6 +32,7 @@ COPY handler.py /app/handler.py
 COPY entrypoint.sh /app/entrypoint.sh
 COPY workflows /app/workflows
 
+# Permissions
 RUN chmod +x /app/entrypoint.sh
 
 # Default envs
