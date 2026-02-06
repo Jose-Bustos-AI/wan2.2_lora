@@ -9,6 +9,8 @@ from urllib.parse import urlparse
 from supabase import create_client, Client
 from websocket import WebSocket
 
+print("### HANDLER_VERSION = 2026-02-06_ULTIMATE_SEEDFIX ###")
+
 # --- Bootstrap & Config ---
 SUPABASE_URL = os.environ.get("SUPABASE_URL")
 SUPABASE_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")

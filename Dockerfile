@@ -36,8 +36,9 @@ COPY handler.py /app/handler.py
 COPY entrypoint.sh /app/entrypoint.sh
 COPY workflows /app/workflows
 
-# Permissions
-RUN chmod +x /app/entrypoint.sh
+# Permissions & Fix Windows Line Endings (CRLF -> LF)
+RUN sed -i 's/\r$//' /app/entrypoint.sh && \
+    chmod +x /app/entrypoint.sh
 
 # Default envs
 ENV COMFY_HOST=127.0.0.1:8188
