@@ -27,6 +27,10 @@ RUN git clone https://github.com/comfyanonymous/ComfyUI.git /comfyui && \
 # Optional: ComfyUI Manager (Good to have)
 RUN git clone https://github.com/Comfy-Org/ComfyUI-Manager.git /comfyui/custom_nodes/ComfyUI-Manager || true
 
+# Install missing custom nodes (Hunyuan Latent & Image Saver)
+RUN git clone https://github.com/ShmuelRonen/ComfyUI-EmptyHunyuanLatent.git /comfyui/custom_nodes/ComfyUI-EmptyHunyuanLatent && \
+    git clone https://github.com/giriss/comfy-image-saver.git /comfyui/custom_nodes/comfy-image-saver
+
 # Copy app files
 COPY handler.py /app/handler.py
 COPY entrypoint.sh /app/entrypoint.sh
